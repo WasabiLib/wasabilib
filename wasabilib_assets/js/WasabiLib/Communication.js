@@ -76,7 +76,6 @@ function WebSiteManager() {
             event.preventDefault();
 
             var form = new External_Form($(event.target));
-            console.log(event.target);
             _self.wasabiNotificationCenter.send(form.self.attr('action'), form);
         },
         //´Wat is dat?
