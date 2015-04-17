@@ -1,0 +1,121 @@
+/*
+-------------
+Wizard Style
+-------------
+*/
+
+.wizard {
+    position: relative;
+    overflow: hidden;
+}
+.wizard:before, .wizard:after {
+    display: table;
+    line-height: 0;
+    content: "";
+}
+.wizard:after {
+    clear: both;
+}
+.wizard ul {
+    /*width: 100%;*/
+    padding: 0;
+    margin: 0;
+    list-style: none outside none;
+}
+.wizard ul.previous-disabled li.complete {
+    cursor: default;
+}
+.wizard ul.previous-disabled li.complete:hover {
+    color: #468847;
+    cursor: default;
+    background: #f3f4f5;
+}
+.wizard ul.previous-disabled li.complete:hover .chevron:before {
+    border-left-color: #f3f4f5;
+}
+.wizard ul li {
+    position: relative;
+    float: left;
+    height: 36px;
+    padding: 0 20px 0 30px;
+    margin: 0;
+    font-size: 100%;
+    line-height: 36px;
+    color: #a5a5a5;
+    cursor: default;
+    background: #f2f2f2;
+}
+.wizard ul li:first-child {
+    padding-left: 20px;
+}
+.wizard ul li .chevron {
+    position: absolute;
+    top: -24px;
+    right: -14px;
+    z-index: 1;
+    display: block;
+    border: 48px solid transparent;
+    border-right: 0;
+    border-left: 24px solid #fff;
+}
+.wizard ul li .chevron:before {
+    position: absolute;
+    top: -48px;
+    right: 5px;
+    display: block;
+    border: 48px solid transparent;
+    border-right: 0;
+    border-left: 24px solid #f2f2f2;
+    content: "";
+}
+.wizard ul li.complete {
+    color: #fff;
+    background: #4ba84b;
+}
+.wizard ul li.complete:hover {
+    cursor: pointer;
+    background: #49a449;
+}
+.wizard ul li.complete:hover .chevron:before {
+    border-left: 24px solid #49a449;
+}
+.wizard ul li.complete .chevron:before {
+    border-left: 24px solid #4ba84b;
+}
+.wizard ul li.active {
+    color: #fff;
+    background: #296eaa;
+}
+.wizard ul li.active .chevron:before {
+    border-left: 24px solid #296eaa;
+}
+.wizard ul li .badge {
+    position: relative;
+    top: -2px;
+    margin-right: 8px;
+    padding: 4px 7px;
+}
+.wizard ul li .badge.badge-info {
+    background-color: #1f5381;
+}
+.wizard ul li .badge.badge-success {
+    background-color: #3b853b;
+}
+
+.step-content {
+    margin: 30px 0;
+    padding-left: 20px;
+}
+.step-content .step-pane {
+    display: none;
+}
+.step-content .active {
+    display: block;
+}
+.step-content .active .btn-group .active {
+    display: inline-block;
+}
+
+.hide {
+    display: none;
+}

@@ -1,0 +1,4 @@
+<button name="stepAction" value="<?= $this->stepActionDirection ?>" id="<?= $this->id ?>" class="btn btn-primary pull-left <?=$this->btnClass_extend ?> <?=$this->stepActionDirection == "next" ? $this->nextButtonClasses : $this->prevButtonClasses ?>" data-cb="ext_form_submit"
+        form="<?= $this->buttonDataForm ?>" data-json='{"name":"stepAction","value":"<?= $this->stepActionDirection ?>"}'
+        ><?=$this->label ?>
+</button>

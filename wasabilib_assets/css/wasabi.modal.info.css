@@ -1,0 +1,42 @@
+/*
+--------------------------
+Info Modal Simple Version
+--------------------------
+*/
+
+
+.wasabi_modal_info.modal.fade .modal-dialog {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+.wasabi_modal_info.modal.fade {
+    opacity: 0;
+    -webkit-transition: opacity 0.05s linear;
+    transition: opacity 0.05s linear;
+}
+
+.wasabi_modal_info.modal.fade.in {
+    opacity: 1;
+}
+
+.wasabi_modal_info .modal-content {
+    padding: 15px;
+}
+
+.wasabi_modal_info .modal-header {
+    padding: 0 0 15px 0;
+    margin-bottom: 15px;
+}
+
+.wasabi_modal_info .modal-body {
+    padding: 0 0 15px 0;
+}
+.wasabi_modal_info .modal-footer {
+    padding: 15px 0 0 0;
+}
+
+.wasabi_modal_info p {
+    padding: 0;
+    margin: 0;
+}

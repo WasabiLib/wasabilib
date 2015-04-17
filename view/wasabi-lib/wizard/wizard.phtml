@@ -1,0 +1,17 @@
+<div id="<?=$this->id; ?>">
+    <div class="wizard-wrapper <?=$this->wrapperClasses?>">
+        <div id="wizardErrorMessage" class="<?=$this->errorClasses?>"><?= $this->errorMessage ?>
+
+        </div>
+        <div class="clearfix">
+            <div id="breadcrumb" class="wizard <?=$this->breadCrumbContainerClasses?>">
+                <ul class="steps list-unstyled <?=$this->breadcrumbListClasses?>"><?= $this->breadcrumbNavigation ?></ul>
+            </div>
+
+            <div id="wizardContent" class="<?=$this->contentClasses?>"><?= $this->wizardContent ?></div>
+            <div class="buttonWrapper clearfix <?=$this->buttonWrapperClasses?>">
+                    <?= $this->wizardButtons ?>
+            </div>
+        </div>
+    </div>
+</div>

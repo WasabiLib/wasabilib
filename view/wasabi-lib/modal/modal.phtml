@@ -1,0 +1,19 @@
+<div class="modal wasabiModal <?= $this->classes ?>" <?= $this->inlineConfig ?>>
+    <div class="modal-dialog <?= $this->size ?>">
+        <div class="modal-content">
+            <div class="modal-header">
+                <?= $this->closeButton ?>
+                <h4 class="modal-title"><?= $this->title ?></h4>
+            </div>
+            <div class="modal-body">
+                <?= $this->content ?>
+            </div>
+            <div class="modal-footer clearfix">
+<!--                <span class="modal-footer-text">Lorem Ipsum <a href="#">Lesen Sie mehr</a></span>-->
+                <div class="buttons-wrap">
+                   <?= $this->buttons ?>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

@@ -1,0 +1,32 @@
+{
+    "name": "wasabi/wasabilib",
+    "description": "The Wasabi Library Package",
+    "license": "General Public License",
+    "version": "0.0.2",
+    "authors": [
+        {
+            "name": "Norman Albusberger",
+            "email": "norman.albusberger@wasabilib.org"
+        }, 
+        {
+            "name": "Nico Berndt",
+            "email": "nico.berndt@wasabilib.org"
+        }, 
+        {
+            "name": "Sascha Qualitz",
+            "email": "sascha.qualitz@wasabilib.org"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-0": { 
+            "WasabiLib": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.0.2-dev",
+            "dev-develop": "0.0.2-dev"
+        }
+    }
+}
