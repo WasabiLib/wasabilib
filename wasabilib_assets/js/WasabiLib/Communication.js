@@ -101,7 +101,7 @@ WebSiteManager.prototype.setWasabiNotificationCenter = function (wasabiNotificat
 WebSiteManager.prototype.registerCommonEvents = function () {
     var _self = this;
     $(document).on("focus", "form input, form textarea, form select", function () {
-        $(this).css("background-color", "white");
+        //$(this).css("background-color", "white");
     });
 
     $(document).on("wasabiNotification", null, function(event) {
