@@ -119,6 +119,8 @@
 				item_class = params.class_name || $.gritter.options.class_name,
 				position = $.gritter.options.position,
 				time_alive = params.time || '';
+            this.fade_in_speed = params.fade_in_speed || '';
+            this.fade_out_speed = params.fade_out_speed || '';
 
 			this._verifyWrapper();
 
@@ -149,7 +151,7 @@
             var icon_str;
             if(icon){
 
-                icon_str = '<div class="gritterIcon"><i class="fa fa-'+icon+'"></i></div>';
+                icon_str = '<div class="gritterIcon"><i class="'+icon+'"></i></div>';
                 class_name = (icon !="") ? 'gritter-with-icon' : 'gritter-without-icon';
             }
 

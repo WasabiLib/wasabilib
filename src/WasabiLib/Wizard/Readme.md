@@ -1,4 +1,4 @@
-Wizard module for Zend Framework 2
+Wasabi Wizard 
 ==================================
 
 ####add/change this to/on each step-form
@@ -19,7 +19,7 @@ Wizard module for Zend Framework 2
 
 
 
-###Standardbehaviour
+###Standard behaviour
 
     you need every time 1 additional step, e.g. if you have 2 steps to collect information you need an additional step as last step (this steps display a summarize or thanks etc.)
     this behaviour is due to the change of the button in the penultimate step. the wizard change the label of the 'next'-button in the standard to >>finish<<

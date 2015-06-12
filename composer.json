@@ -1,8 +1,8 @@
 {
     "name": "wasabi/wasabilib",
     "description": "The Wasabi Library Package",
-    "license": "General Public License",
-    "version": "0.0.2",
+    "license": "Apache License, Version 2.0",
+    "version": "0.0.5",
     "authors": [
         {
             "name": "Norman Albusberger",
@@ -25,8 +25,8 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "0.0.2-dev",
-            "dev-develop": "0.0.2-dev"
+            "dev-master": "0.0.5-dev",
+            "dev-develop": "0.0.5-dev"
         }
     }
 }

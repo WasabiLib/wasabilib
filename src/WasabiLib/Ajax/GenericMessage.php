@@ -1,34 +1,50 @@
 <?php
+
 /**
- * WasabiLib http://www.wasabilib.org
- *
  * @link https://github.com/WasabilibOrg/wasabilib
- * @license The MIT License (MIT) Copyright (c) 2015 Nico Berndt, Norman Albusberger, Sascha Qualitz
+ * Copyright 2015 www.wasabilib.org
+ * @license Apache License, Version 2.0
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 namespace WasabiLib\Ajax;
 
-
-class GenericMessage extends  ResponseType{
+/**
+ * The base class of all WasabiLib response classes.
+ * Class GenericMessage
+ * @example
+ * $message = new GenericMessage("#target_id", "ACTION_TYPE_REPLACE", "InnerHtml", array("<p style='margin: 0 0 0 0'>I am injected during an AJAX request.</p>"));
+ *
+ * $response = new Response();
+ * $response->add($message);
+ *
+ * return $this->getResponse()->setContent($response);
+ * @package WasabiLib\Ajax
+ */
+class GenericMessage extends ResponseType{
 
     /**
+     * A css selector to target one or more html elements in the clients browsers DOM.
      * @var string
      */
     protected $selector;
 
     /**
+     * A string which holds the information which methods on the JavaScript side has to be called.
      * @var string
      */
     protected $actionType;
 
     /**
+     * Array with parameters which are send to the browser to used as parameters for the JavaScript method call.
      * @var array
      */
     protected $params = array();
@@ -36,15 +52,14 @@ class GenericMessage extends  ResponseType{
     /**
      * @param string $selector
      * @param string $actionType
-     * @param string $eventType
+     * @param string $recipientType
      * @param array $params
      */
-    public function __construct($selector = null, $actionType = null, $eventType = '', $eventId = '', $params = array()){
+    public function __construct($selector = null, $actionType = null, $recipientType = '', $params = array()){
         $this->selector = $selector;
         $this->params = $params;
         $this->actionType = $actionType;
-        $this->setEventName($eventType);
-        $this->setEventId($eventId);
+        $this->setRecipientType($recipientType);
     }
 
     /**

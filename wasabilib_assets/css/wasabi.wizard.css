@@ -3,10 +3,10 @@
 Wizard Style
 -------------
 */
-
 .wizard {
     position: relative;
     overflow: hidden;
+    background-color: #f9f9f9;
 }
 .wizard:before, .wizard:after {
     display: table;
@@ -17,7 +17,7 @@ Wizard Style
     clear: both;
 }
 .wizard ul {
-    /*width: 100%;*/
+    width: 4000px;
     padding: 0;
     margin: 0;
     list-style: none outside none;
@@ -36,11 +36,11 @@ Wizard Style
 .wizard ul li {
     position: relative;
     float: left;
-    height: 36px;
+    height: 46px;
     padding: 0 20px 0 30px;
     margin: 0;
-    font-size: 100%;
-    line-height: 36px;
+    font-size: 16px;
+    line-height: 46px;
     color: #a5a5a5;
     cursor: default;
     background: #f2f2f2;
@@ -115,7 +115,6 @@ Wizard Style
 .step-content .active .btn-group .active {
     display: inline-block;
 }
-
-.hide {
-    display: none;
+.buttonWrapper{
+    padding-bottom: 5px;
 }

@@ -1,0 +1,29 @@
+.wasabi-suggest-result-container{
+    z-index: 10000;
+    position: absolute;
+}
+
+.wasabi-suggest-result-container img{
+    width: 45px;
+    height: 45px;
+    margin: 0px 9px  0px 0px;
+    float: left;
+
+
+}
+.wasabi-suggest-result-container h4{
+    font-size: 14px;
+    display: inline;
+
+}
+
+.wasabi-suggest-result-container p{
+    font-size: 13px;
+    color: #a2a2a2;
+    padding-bottom: 10px;
+}
+
+.wasabi-suggest-result-container .list-group-item-heading .suggest_result_bold{
+    font-weight: bold;
+    display: inline;
+}
