@@ -569,6 +569,7 @@ External_Form.prototype = Object.create(Form.prototype);
 External_Form.prototype.setTarget = function (target) {
     var _self = this;
     _self.element = target.tagName === "FORM" ? target : $('#' + target.attr("form"));
+    _self.jsonParams = $(target).attr("data-json") ? JSON.parse('[' + $(target).attr("data-json") + ']') : null;
 };
 
 /**
@@ -579,10 +580,8 @@ External_Form.prototype.setTarget = function (target) {
 External_Form.prototype.getTransmissionCapableContent = function () {
     var _self = this;
     var extractedData = Form.prototype.getTransmissionCapableContent.call(this);
-    var extFormSubBtn = $("[form="+_self.getElement().attr("id")+"]");
-    var jsonParams = extFormSubBtn.attr("data-json") ? JSON.parse('[' + extFormSubBtn.attr("data-json") + ']') : null;
-    if (jsonParams) {
-        $.merge(extractedData, jsonParams);
+    if (_self.jsonParams) {
+        $.merge(extractedData, _self.jsonParams);
     }
     return extractedData;
 };
