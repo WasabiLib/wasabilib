@@ -35,8 +35,8 @@ WasabiSuggestFeatures.prototype.registerCommonEvents = function () {
     $(document).on('click', function(e){
         //clicked element
 
-        var target = $(e.target).closest('.wasabi_suggest_features');
-        var suggestId = target.hasClass('wasabi_suggest_features')==true ? target.attr('id') : null;
+        var target = $(e.target).closest('.wasabi_suggest');
+        var suggestId = target.hasClass('wasabi_suggest')==true ? target.attr('id') : null;
         var suggestResultFields = $('.wasabi-suggest-result-container');
         if(suggestId==null) {
             suggestResultFields.remove();
@@ -56,7 +56,7 @@ WasabiSuggestFeatures.prototype.registerCommonEvents = function () {
         if([38, 40].indexOf(event.keyCode) > -1) {
             var target = $(event.target);
             var closestResult = target.closest(".wasabi-suggest-result-container");
-            var closestSuggest = target.closest(".wasabi_suggest_features");
+            var closestSuggest = target.closest(".wasabi_suggest");
 
             if(closestResult != undefined || closestSuggest != undefined) {
                 event.preventDefault();
@@ -97,7 +97,7 @@ WasabiSuggestFeatures.prototype.registerCommonEvents = function () {
     /**
      * arrow key navigation on suggest field
      */
-    $(".wasabi_suggest_features").on("keydown",function(e){
+    $(".wasabi_suggest").on("keydown",function(e){
         var suggestResultId = $(this).attr('id')+'-result';
         var listItems = $("#"+suggestResultId).find('a');
         if(e.which === 40){
@@ -167,7 +167,7 @@ WasabiSuggestFeatures.prototype.registerCommonEvents = function () {
     /**
      * resets the recentElement by focusing the suggest field
      */
-    $(document).on("focus",".wasabi_suggest_features", function(e){
+    $(document).on("focus",".wasabi_suggest", function(e){
         var _self = $(this);
         recentElement = null;
         setTimeout(function(){
@@ -177,7 +177,7 @@ WasabiSuggestFeatures.prototype.registerCommonEvents = function () {
     /**
      * removes the result container and the hidden fields if value is null
      */
-    $(document).on("keyup",".wasabi_suggest_features",function(e){
+    $(document).on("keyup",".wasabi_suggest",function(e){
         if($(e.target).val().length==0){
             var suggestResultId = $(e.target).attr('id')+'-result';
             $("#"+suggestResultId).remove();
