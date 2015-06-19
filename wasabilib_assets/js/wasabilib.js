@@ -680,6 +680,7 @@ WebSiteManager.prototype.addCallback = function (callback) {
     var _self = this;
 
     _self.possibleCallbacks[callback.getKey()] = callback;
+    _self.registerEventHandler();
 };
 
 /**
@@ -730,7 +731,7 @@ WebSiteManager.prototype.registerEventHandler = function () {
         var element = $("#"+elementId); //recent Element
         var callback = _self.getCallback(element.attr('data-cb'));
 
-        if (!_self.registeredElements[elementId]) {
+        if (!_self.registeredElements[elementId] && (element.attr('data-cb') == undefined || callback != undefined)) {
             if (element.prop('tagName') === "FORM") {
                 myEvent = myEvent ? myEvent : "submit";
                 callback = callback ? callback : _self.getCallback('form');
@@ -738,9 +739,9 @@ WebSiteManager.prototype.registerEventHandler = function () {
             else if (element.prop('tagName') === "A") {
                 callback = callback ? callback : _self.getCallback('link');
                 myEvent = myEvent ? myEvent : "click";
-            } else if (element.prop('tagName') === "A") {
-                callback = callback ? callback : _self.getCallback('link');
-                myEvent = myEvent ? myEvent : "click";
+            } else if (element.hasClass("wasabi_suggest")) {
+                callback = callback ? callback : _self.getCallback('suggest');
+                myEvent = myEvent ? myEvent : "keyup";
             } else {
                 callback = callback ? callback : _self.getCallback('button');
                 myEvent = myEvent ? myEvent : "click";
@@ -827,6 +828,16 @@ WebSiteManager.prototype.getCallback = function (functionName) {
 WebSiteManager.prototype.setPossibleEvents = function (possibleEvents) {
     var _self = this;
     _self.possibleEvents = possibleEvents;
+};
+
+/**
+ * Adds a possible event to the existing ones.
+ * @param possibleEvent
+ */
+WebSiteManager.prototype.addPossibleEvent = function (possibleEvent) {
+    var _self = this;
+
+    _self.possibleEvents[possibleEvent] = true;
 };
 
 
@@ -1135,11 +1146,6 @@ $(document).ready(function(){
     condition.setTimeout(300);
     suggestCallback.setCondition(condition);
     websiteManager.addCallback(suggestCallback);
-
-    /**
-     * Start registering all needed event handlers.
-     */
-    websiteManager.registerEventHandler();
 
     /**
      * Set the possible methods which can be used by recipient objects.
