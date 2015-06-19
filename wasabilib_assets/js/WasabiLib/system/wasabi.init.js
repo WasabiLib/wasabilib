@@ -128,11 +128,6 @@ $(document).ready(function(){
     websiteManager.addCallback(suggestCallback);
 
     /**
-     * Start registering all needed event handlers.
-     */
-    websiteManager.registerEventHandler();
-
-    /**
      * Set the possible methods which can be used by recipient objects.
      */
     websiteManager.getExecuteRemoteProcedureCallManager().setPossibleMethods({
