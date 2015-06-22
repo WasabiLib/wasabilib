@@ -16,7 +16,7 @@
  */
 
 namespace WasabiLib\Modal;
-use WasabiLib\Ajax\DomManipulator;
+use WasabiLib\Ajax\GenericMessage;
 use WasabiLib\Ajax\ResponseConfigurator;
 use Zend\Http\Response;
 use Zend\View\Exception;
@@ -34,13 +34,13 @@ use Zend\View\View;
  * @example
  *
  *  $response = new Response();
-    $modal = new Modal\WasabiModal("#wasabi_modal", $this->getrenderer());
-    $modal->setTitle("Dies ist ein Modal-Fenster");
-    $modal->setContent("... und sein zugehöriger Content.");
-
-    $response->add($modal);
-
-    return $this->ajaxResponse($response);
+ *  $modal = new Modal\WasabiModal("#wasabi_modal", $this->getrenderer());
+ *  $modal->setTitle("Dies ist ein Modal-Fenster");
+ *  $modal->setContent("... und sein zugehöriger Content.");
+ *
+ *  $response->add($modal);
+ *
+ *  return $this->ajaxResponse($response);
  */
 class WasabiModalView extends ResponseConfigurator {
     /**
@@ -350,9 +350,8 @@ class WasabiModalView extends ResponseConfigurator {
             $this->viewModel->setVariable("inlineConfig", $inlineConfig);
         }
         // Prepare behavior config of the modal view and size
-        $domManipulator = new DomManipulator($this->selector." .wasabiModal#".$this->preRenderConfig->getId(), null, "show", DomManipulator::ACTION_TYPE_MODAL);
-        $domManipulator->setRecipientType("ModalWindow");
-        $preConfig[] = $domManipulator;
+        $genericMessage = new GenericMessage($this->selector." .wasabiModal#".$this->preRenderConfig->getId(), "ACTION_TYPE_MODAL", "ModalWindow", array("show"));
+        $preConfig[] = $genericMessage;
 
         return $preConfig;
     }
