@@ -120,9 +120,11 @@ class ResultCell {
         ".$this->badge."
 
 
-           <h4 class='list-group-item-heading'>".$this->textLabel."</h4>
-           <p class='list-group-item-text'>".$this->subTitle."</p>
-            </a>\n";
+             <h4 class='list-group-item-heading'>".$this->textLabel."</h4>";
+        if($this->subTitle)
+            $cell.="<p class='list-group-item-text'>".$this->subTitle."</p>";
+            
+            $cell .="</a>\n";
 
         return $cell;
     }
