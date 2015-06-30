@@ -79,6 +79,10 @@ WebSiteManager.prototype.registerCommonEvents = function () {
         _self.getWasabiNotificationCenter().notify(event.message);
     });
 
+    $(document).on("wasabi_new_ajax_element", null, function(event) {
+        _self.registerEventHandler();
+    });
+
     // Remove modal window from the DOM when it is closed.
     $(document).on("hidden.bs.modal", document, function(event) {
         setTimeout(function(){
@@ -112,9 +116,9 @@ WebSiteManager.prototype.registerEventHandler = function () {
     var _self = this;
 
     $(".ajax_element").each(function (index) {
-        var myEvent = $(this).attr('data-event');
-        var elementId = $(this).attr('id');
-        var element = $("#"+elementId); //recent Element
+        var element = $(this); //recent Element
+        var myEvent = element.attr('data-event');
+        var elementId = element.attr('id');
         var callback = _self.getCallback(element.attr('data-cb'));
 
         if (!_self.registeredElements[elementId] && (element.attr('data-cb') == undefined || callback != undefined)) {
@@ -139,10 +143,10 @@ WebSiteManager.prototype.registerEventHandler = function () {
                 }
                 else {
                     if (!$(this).attr('id')) {
-                        //console.log("Element found without id. Look into your bullshit code");
+                        //console.log("Element found without id.Look into your bullshit code");
                     }
                     else {
-                        $(document).on(myEvent, '#' + elementId, function(event) {
+                        $(document).on(myEvent, this, function(event) {
                             event.preventDefault();
                             callback.execute(event);
                             var conf = {};
