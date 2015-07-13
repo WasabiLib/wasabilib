@@ -146,7 +146,7 @@ WebSiteManager.prototype.registerEventHandler = function () {
                         //console.log("Element found without id.Look into your bullshit code");
                     }
                     else {
-                        $(document).on(myEvent, this, function(event) {
+                        $(document).on(myEvent, '#' + elementId, function(event) {
                             event.preventDefault();
                             callback.execute(event);
                             var conf = {};
