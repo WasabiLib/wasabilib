@@ -1,0 +1,208 @@
+/*
+------------
+Wasabi Modal
+------------
+*/
+
+
+.wasabi_modal_standard .modal-content {
+    padding: 15px;
+}
+
+.wasabi_modal_standard .modal-header {
+    background-color: #107FC9;
+    color: #fff;
+    margin: 4px -29px 16px -29px;
+    padding: 3px 10px 6px 12px;
+    font-size: 100%;
+    line-height: 1.2;
+    position: relative;
+    border-bottom: none;
+    box-shadow: 0 1px 2px #5e5e61;
+}
+
+.wasabi_modal_standard .modal-title {
+    color: #fff;
+}
+
+.wasabi_modal_standard .modal-header:after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: 0px;
+    top: 100%;
+    border-width: 3px 7px;
+    border-style: solid;
+    border-color: #085782 transparent transparent #085782;
+}
+.wasabi_modal_standard .modal-header:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 0px;
+    top: 100%;
+    border-width: 3px 7px;
+    border-style: solid;
+    border-color: #085782 #085782 transparent transparent;
+}
+
+.wasabi_modal_standard .modal-header .close {
+    color: #fff;
+    float: right;
+    font-size: 100%;
+    font-weight: 300;
+    margin-top: 4px;
+    line-height: 1;
+    opacity: 1;
+    text-shadow: 0 1px 0 #fff;
+}
+.wasabi_modal_standard .modal-body {
+    padding: 0;
+}
+
+.wasabi_modal_standard .modal-body img {
+    margin: 0 auto;
+}
+
+.wasabi_modal_standard .modal-body h3 {
+    margin-bottom: 10px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.wasabi_modal_standard .modal-body h3 span {
+    font-size: 70%;
+    padding: 4px 0 0 0;
+}
+
+.wasabi_modal_standard p {
+    font-size: 95%;
+    margin-bottom: 0;
+}
+
+.wasabi_modal_standard .modal-footer {
+    border-top: 1px solid #e2e2e2;
+    padding: 15px 0 0 0;
+    text-align: left;
+}
+
+.wasabi_modal_standard .modal-footer .buttons-wrap {
+    float: right;
+}
+
+/* Fliesstext and Links inside Footer --- to be added to php controller? */
+
+.wasabi_modal_standard .modal-footer .modal-footer-text {
+    color: #797979;
+    font-size: 80%;
+    line-height: 1.4;
+}
+
+
+
+/*
+-------------------------------------------------------------
+Dialog Box for short messages with questions and actions
+-------------------------------------------------------------
+*/
+
+.wasabi_modal_dialog .modal-backdrop.in {
+    opacity: 0.1;
+    filter: alpha(opacity=10);
+}
+
+.wasabi_modal_dialog .modal-dialog {
+    margin: 0 auto;
+    max-width: 500px;
+    width: auto;
+}
+
+.wasabi_modal_dialog .modal-content {
+    max-width: 540px;
+    height: auto;
+    background: rgba(243, 243, 243, 0.90);
+    color: #000000;
+    /*box-shadow: 0 1px 3px rgba(0, 36, 92, 0.7);*/
+    -webkit-box-shadow: 0 3px 9px rgba(63, 52, 0, 0.79);
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    -webkit-border-radius: 0 0 10px 10px;
+    -moz-border-radius: 0 0 10px 10px;
+    border-radius: 0 0 10px 10px;
+    border: 0;
+}
+
+.wasabi_modal_dialog .modal-header {
+    border-bottom: 0;
+    padding: 15px 15px 0 15px;
+}
+
+.wasabi_modal_dialog .modal-header h4 {
+    color: #000000;
+    font-size: 120%;
+    text-align: center;
+    line-height: 1.3;
+    font-weight: 400;
+}
+
+.wasabi_modal_dialog .modal-body .fa {
+    font-size: 440%;
+}
+
+.wasabi_modal_dialog p {
+    margin: 0;
+    padding: 0 0 8px 0;
+}
+
+.wasabi_modal_dialog .modal-footer {
+    border-top: 0;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 0;
+    padding: 0 15px 25px 15px;
+}
+
+/*
+--------------------------
+Info Modal Simple Version
+--------------------------
+*/
+
+
+.wasabi_modal_info.modal.fade .modal-dialog {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+.wasabi_modal_info.modal.fade {
+    opacity: 0;
+    -webkit-transition: opacity 0.05s linear;
+    transition: opacity 0.05s linear;
+}
+
+.wasabi_modal_info.modal.fade.in {
+    opacity: 1;
+}
+
+.wasabi_modal_info .modal-content {
+    padding: 15px;
+}
+
+.wasabi_modal_info .modal-header {
+    padding: 0 0 15px 0;
+    margin-bottom: 15px;
+}
+
+.wasabi_modal_info .modal-body {
+    padding: 0 0 15px 0;
+}
+.wasabi_modal_info .modal-footer {
+    padding: 15px 0 0 0;
+}
+
+.wasabi_modal_info p {
+    padding: 0;
+    margin: 0;
+}

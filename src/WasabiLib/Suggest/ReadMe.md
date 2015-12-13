@@ -1,11 +1,10 @@
 Wasabi Suggest Field
 ====================
-
 The Wasabi Suggest Field is based on the Wasabi Ajax approach. 
 So there is no need to write any line of JavaScript code to use it.
 
-Files to include
-----------------
+##Files to include
+
 If you are using the Wasabi Skeleton Application the Wasabi Suggest Field is ready to use.
 If not you need to put the following line into the header section of your layout.phtml:
 <script type="text/javascript" src="/wasabilib_assets/js/WasabiLib/ext_lib/wasabi.suggest.js"></script>
@@ -15,31 +14,31 @@ The wasabi.suggest.js manages all key events and visual effects.
 The CSS file is also needed  
 <link href="/wasabilib_assets/css/wasabi.suggest.css" media="screen" rel="stylesheet" type="text/css">
 
-Usage
-=====
+##Usage
+
 You can initialize the suggest field with the following line of html code:
 
-<input class="ajax_element wasabi_suggest_features form-control input-md" id="yourElementId" type="text" data-event="keyup" data-cb="suggest" data-href="/path/to/controller" data-digits="3">
+    <input class="ajax_element wasabi_suggest_features form-control input-md" id="yourElementId" type="text" data-event="keyup" data-cb="suggest" data-href="/path/to/controller" data-digits="3">
 
 The necessary css classes for the ajax management are *ajax_element* and *wasabi_suggest_features*. 
 The other css classes are bootstrap standard and can be customized in some cases. 
 
 HTML5 attributes: data-href, data-timeout, data-disabletime
----------------------------------------------------
+
 
 Data-href: Defines the path on the server where the suggestions come from.
 Data-timeout: Integer value defines the delay in ms the request is send to the server. The default value is 0.
 Data-disabletime: Defines how long the element is disabled. Default is as long the request is running.
 
 
-Server-side
-===========
+##Server-side
+
 
 Read the example below
 
-    use WasabiLib\Ajax\Response;
-    use WasabiLib\Ajax\SuggestResult;
-    use WasabiLib\Ajax\SuggestResultCell;
+        use WasabiLib\Ajax\Response;
+        use WasabiLib\Ajax\SuggestResult;
+        use WasabiLib\Ajax\SuggestResultCell;
 
         public function suggestAction(){
             //grab the content of the input field and process it the way you need

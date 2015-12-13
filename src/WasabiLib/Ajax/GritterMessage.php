@@ -21,13 +21,13 @@ namespace WasabiLib\Ajax;
  * @package WasabiLib\Ajax
  *  title: 'Jane Doe',
  * text: 'Online',
- * image: 'assets/img/user3.png',
+ * image: 'wasabi/img/user3.png',
  * time: 2000,
  * after_close: function() {
  * $.gritter.add({
  * title: 'Jordan Smith',
  * text: 'Offline',
- * image: 'assets/img/user5.png',
+ * image: 'wasabi/img/user5.png',
  * time: 2000
  */
 class GritterMessage implements ResponseTypeInterface {
