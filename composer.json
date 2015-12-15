@@ -1,6 +1,6 @@
 {
     "name": "wasabi/wasabilib",
-    "type": "Module"
+    "type": "Module",
     "description": "ZF2 Ajax Module",
     "keywords": ["ZF2 Ajax Module", "php ajax", "wasabilib"],
     "homepage": "https://github.com/wasabiLib/wasabilib",
