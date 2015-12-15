@@ -1,7 +1,10 @@
 {
     "name": "wasabi/wasabilib",
-    "description": "The Wasabi Library Package",
-    "license": "The MIT License (MIT)",
+    "type": "Module"
+    "description": "ZF2 Email Module Service",
+    "keywords": ["ZF2 Ajax Module", "php ajax", "wasabilib"],
+    "homepage": "https://github.com/wasabiLib/wasabilib",
+    "license": "MIT License",
     "version": "0.0.6",
     "authors": [
         {
