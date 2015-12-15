@@ -1,7 +1,7 @@
 {
     "name": "wasabi/wasabilib",
     "description": "The Wasabi Library Package",
-    "license": "Apache License, Version 2.0",
+    "license": "The MIT License (MIT)",
     "version": "0.0.6",
     "authors": [
         {
