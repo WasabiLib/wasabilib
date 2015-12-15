@@ -4,7 +4,7 @@
     "description": "ZF2 Ajax Module",
     "keywords": ["ZF2 Ajax Module", "php ajax", "wasabilib"],
     "homepage": "https://github.com/wasabiLib/wasabilib",
-    "license": "MIT License",
+    "license": "The MIT License (MIT)",
     "version": "0.0.6",
     "authors": [
         {
