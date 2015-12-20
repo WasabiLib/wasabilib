@@ -18,7 +18,15 @@ And a lot of extensions based on these components
 For a full integration the following assets are needed:
 jQuery, Bootstrap, FontAwesome
 
+##Installation
+For a not yet existing project we recommend the WasabiLib Skeleton Application https://github.com/WasabiLib/wasabilib_zf2_skeleton_application
 
+###For existing ZF2 projects 
+1. Clone the repository into your vendor folder
+2. Copy the css and img files under venodor/wasabilib/wasabi into the public css and img folder
+3. Copy the wasabilib.min.js, wasabi.gritter.js, wasabi.suggest.js into public/js
+4. Include the js-files in the layout.phtml as they are loaded after jquery
+5. Include the CSS files as they are loaded after bootstrap.css
 
 
 ##Please Visit http://www.wasabilib.org for detailed information.
