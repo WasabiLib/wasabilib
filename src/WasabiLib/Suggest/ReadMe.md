@@ -13,13 +13,13 @@ If not you need to put the following line into the header section of your layout
 The wasabi.suggest.js manages all key events and visual effects.
 
 The CSS file is also needed  
-<link href="/wasabilib_assets/css/wasabi.suggest.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/wasabilib_assets/css/wasabi.suggest.css" media="screen" rel="stylesheet" type="text/css">
 
 Usage
 =====
 You can initialize the suggest field with the following line of html code:
 
-<input class="ajax_element wasabi_suggest_features form-control input-md" id="yourElementId" type="text" data-event="keyup" data-cb="suggest" data-href="/path/to/controller" data-digits="3" data-json="{}">
+    <input class="ajax_element wasabi_suggest_features form-control input-md" id="yourElementId" type="text" data-event="keyup" data-cb="suggest" data-href="/path/to/controller" data-digits="3" data-json="{}">
 
 The necessary css classes for the ajax management are *ajax_element* and *wasabi_suggest_features*. 
 The other css classes are bootstrap standard and can be customized in some cases. 
@@ -28,7 +28,9 @@ HTML5 attributes: data-href, data-timeout, data-disabletime
 ---------------------------------------------------
 
 Data-href: Defines the path on the server where the suggestions come from.
+
 Data-timeout: Integer value defines the delay in ms the request is send to the server. The default value is 0.
+
 Data-disabletime: Defines how long the element is disabled. Default is as long the request is running.
 
 
@@ -86,11 +88,11 @@ Setting hidden values
 Often you need to transfer data which is different to the value shown in the suggest field e.g. some database ids.
 You can set data by using the following method:
 
-ResultCell::setData(array('someId' => 'value', 'someMore' => 'anotherValue'));
+    ResultCell::setData(array('someId' => 'value', 'someMore' => 'anotherValue'));
 
 When focus onto a suggest cell hidden fields will be created for every key-value pair given.
         
-        <input type="hidden" class="yourElementId-hidden" name="someId" value="value">
-        <input type="hidden" class="yourElementId-hidden" name="someMore" value="anotherValue">
+    <input type="hidden" class="yourElementId-hidden" name="someId" value="value">
+    <input type="hidden" class="yourElementId-hidden" name="someMore" value="anotherValue">
 
 For more details see the form example on www.wasabilib.org
