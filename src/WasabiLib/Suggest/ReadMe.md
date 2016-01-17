@@ -8,7 +8,7 @@ Files to include
 ----------------
 If you are using the Wasabi Skeleton Application the Wasabi Suggest Field is ready to use.
 If not you need to put the following line into the header section of your layout.phtml:
-<script type="text/javascript" src="/wasabilib_assets/js/WasabiLib/ext_lib/wasabi.suggest.js"></script>
+    <script type="text/javascript" src="/vendor/wasabi/js/wasabi.suggest.js"></script>
 
 The wasabi.suggest.js manages all key events and visual effects.
 
