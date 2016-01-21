@@ -20,7 +20,7 @@
             "email": "sascha.qualitz@wasabilib.org"
         }
     ],
-    "require": {},
+    "require": {"php": ">=5.5"},
     "autoload": {
         "psr-0": { 
             "WasabiLib": "src/"
