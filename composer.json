@@ -9,15 +9,15 @@
     "authors": [
         {
             "name": "Norman Albusberger",
-            "email": "norman.albusberger@wasabilib.org"
+            "email": "norman@wasabilib.org"
         }, 
         {
             "name": "Nico Berndt",
-            "email": "nico.berndt@wasabilib.org"
+            "email": "nico@wasabilib.org"
         }, 
         {
             "name": "Sascha Qualitz",
-            "email": "sascha.qualitz@wasabilib.org"
+            "email": "sascha@wasabilib.org"
         }
     ],
     "require": {"php": ">=5.5"},
