@@ -1,4 +1,6 @@
 #WasabiLib ZF2 Ajax Module
+[![Latest Stable Version](https://poser.pugx.org/wasabi/wasabilib/v/stable)](https://packagist.org/packages/wasabi/wasabilib) [![Total Downloads](https://poser.pugx.org/wasabi/wasabilib/downloads)](https://packagist.org/packages/wasabi/wasabilib) [![Latest Unstable Version](https://poser.pugx.org/wasabi/wasabilib/v/unstable)](https://packagist.org/packages/wasabi/wasabilib) [![License](https://poser.pugx.org/wasabi/wasabilib/license)](https://packagist.org/packages/wasabi/wasabilib)
+
 WasabiLib is a ready-to-use ajax module. 
 You do not need to write a single line JavaScript code to create ajax requests and responses. 
 With the PHP ajax classes you have complete control of the DOM from server-side. 
